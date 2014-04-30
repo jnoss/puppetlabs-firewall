@@ -12,7 +12,7 @@ ARGS_TO_HASH = {
     :params => {
       :chain => 'neutron-openvswi-FORWARD',
       :source => '1.2.3.4/32',
-      :mac_addr => 'FA:16:00:00:00:00',
+      :mac_source => 'FA:16:00:00:00:00',
     },
   },
   'dport_and_sport' => {

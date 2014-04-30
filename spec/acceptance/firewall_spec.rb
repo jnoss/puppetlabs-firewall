@@ -1607,16 +1607,16 @@ describe 'firewall type' do
     end
   end
 
-  describe 'mac_addr' do
+  describe 'mac_source' do
     context '0A:1B:3C:4D:5E:6F' do
       it 'applies' do
         pp = <<-EOS
           class { '::firewall': }
           firewall { '610 - test':
-            ensure => present,
-            source => '10.1.5.28/32',
-            mac_addr => '0A:1B:3C:4D:5E:6F',
-            chain => 'INPUT',
+            ensure      => present,
+            source      => '10.1.5.28/32',
+            mac_source  => '0A:1B:3C:4D:5E:6F',
+            chain       => 'INPUT',
           }
         EOS
 
