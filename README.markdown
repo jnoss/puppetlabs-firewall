@@ -124,7 +124,8 @@ Rules are persisted automatically between reboots, although there are known issu
   **Note** - This only purges IPv4 rules.
   ```puppet
   resources { "firewall":
-    purge => true
+    purge   => true,
+    require => Class['my_fw::post'],
   }
   ```
 2.)  Use the following code to set up the default parameters for all of the firewall rules you will establish later. These defaults will ensure that the `pre` and `post` classes are run in the correct order to avoid locking you out of your box during the first Puppet run.
